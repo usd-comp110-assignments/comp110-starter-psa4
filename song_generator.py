@@ -89,12 +89,11 @@ def main():
     Asks the user for a notestring, generates the song from that
     notestring, then plays the resulting song.
     """
-    import sounddevice
     print("Enter a notestring (without quotes):")
     ns = input()
     song = song_generator(ns)
     song.play()
-    sounddevice.wait()
+    sound.wait_until_all_played()
 
 if __name__ == "__main__":
     main()
