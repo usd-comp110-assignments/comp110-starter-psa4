@@ -134,6 +134,9 @@ class StereoSample():
     def left(self, new_left_val):
         if not isinstance(new_left_val, int):
             raise TypeError("Channel value must be an int")
+    
+        # Clip the value to the range of int16
+        new_left_val = max(-32768, min(32767, new_left_val))
 
         self.__all_samples[self.__index, 0] = new_left_val
 
@@ -148,6 +151,9 @@ class StereoSample():
     def right(self, new_right_val):
         if not isinstance(new_right_val, int):
             raise TypeError("Channel value must be an int")
+
+        # Clip the value to the range of int16
+        new_right_val = max(-32768, min(32767, new_right_val))
 
         self.__all_samples[self.__index, 1] = int(new_right_val)
 

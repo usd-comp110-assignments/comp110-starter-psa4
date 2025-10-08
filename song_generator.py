@@ -5,7 +5,6 @@ Module with functions for PSA #4 of COMP 110 (Fall 2019).
 
 Authors:
 1) Name - USD Email Address
-2) Name - USD Email Address
 """
 
 import sound
